@@ -12,9 +12,9 @@ func TestInvalidInput(t *testing.T) {
 		t.Fatal("failed test for negative number")
 	}
 
-	result, err = numbertowords.Convert(6)
+	result, err = numbertowords.Convert(21)
 	if result != "" || err == nil {
-		t.Fatal("failed test for 6")
+		t.Fatal("failed test for 21")
 	}
 
 }
