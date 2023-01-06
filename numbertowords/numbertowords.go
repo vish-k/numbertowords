@@ -1,8 +1,10 @@
 package numbertowords
 
-func Convert(number int) (string, bool) {
+import "errors"
+
+func Convert(number int) (string, error) {
 	if number < 0 || number > 5 {
-		return "", false
+		return "", errors.New("not in valid range")
 	}
 
 	words := [6]string{
@@ -13,6 +15,6 @@ func Convert(number int) (string, bool) {
 		"four",
 		"five",
 	}
-	return words[number], true
+	return words[number], nil
 
 }

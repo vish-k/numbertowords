@@ -19,8 +19,13 @@ func main() {
 	}
 
 	for _, value := range testvalues {
-		result, valid := numbertowords.Convert(value)
-		fmt.Println(value, result, valid)
+		result, err := numbertowords.Convert(value)
+
+		if err != nil {
+			fmt.Println("ERROR:", fmt.Errorf("%d %s", value, err))
+			continue
+		}
+		fmt.Println(value, result)
 
 	}
 }
