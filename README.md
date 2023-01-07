@@ -1,5 +1,5 @@
 # numbertowords
-golang exercise for converting number to words
+golang exercise for converting numbers between 0 to 99,999 to words
 
 ## unit test 
 go test -v
